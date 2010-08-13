@@ -5,7 +5,7 @@ module TweetButton
     # Merge user specified overrides into defaults, then convert those to data-* attrs
     params = options_to_data_params(default_tweet_button_options.merge(options))
     
-    html = ''.html_safe
+    html = ''
     
     unless @widgetized
       html << tweet_widgets_js_tag
@@ -31,7 +31,7 @@ module TweetButton
   
   def tweet_widgets_js_tag
     @widgetized = true
-    '<script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>'.html_safe
+    '<script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>'
   end
   
   def custom_tweet_button(text = 'Tweet', options = {}, html_options = {})
